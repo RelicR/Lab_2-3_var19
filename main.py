@@ -50,8 +50,9 @@ def laba3():
     for i in range(1, 7):
         print(f"Тест {i}", tests[f"Тест {i}"], '\n')
         profile.run(f"laba2('test{i}')")
-
-choice = input("Выбирете алгоритм работы программы\nВведите 1 для профилирования\nВведите 2 для запуска основной программы\n")
+choice = ''
+while choice != '1' and choice != '2':
+    choice = input("Выбирете алгоритм работы программы\nВведите 1 для профилирования\nВведите 2 для запуска основной программы\n")
 if choice == '1':
     laba3()
 elif choice == '2':
